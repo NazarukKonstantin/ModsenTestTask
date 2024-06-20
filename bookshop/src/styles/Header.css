@@ -1,0 +1,42 @@
+.header_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100vw;
+  margin: 0;
+  padding: 15px;
+  height: 360px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../assets/header_background.jpg');
+  background-position: center;
+}
+
+/* .backgroundWallpaper{
+  position: relative;
+  width: 100%;
+  transform: translateY(-300px);
+} */
+
+.pageTitle {
+  color: aliceblue;
+  font-size: 81px;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.searchBar {
+  width: 40vw;
+  height: 3vw;
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+.searchIcon {
+  width: 20vw;
+  height: 10vw;
+  background-image: url('/bookshop/src/assets/search_icon.svg');
+}
+
+.selectTitle {
+}
