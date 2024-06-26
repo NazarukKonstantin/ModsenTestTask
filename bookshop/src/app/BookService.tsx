@@ -1,7 +1,7 @@
 import axios from 'axios';
-import 'dotenv/config'
+//import 'dotenv/config'
 
-const apiKey = process.env.REACT_APP_BOOKS_API_KEY;
+//const apiKey = process.env.REACT_APP_BOOKS_API_KEY;
 
 export default class BookService {
   static async findBooksMatchingQuery(searchQuery: string) {

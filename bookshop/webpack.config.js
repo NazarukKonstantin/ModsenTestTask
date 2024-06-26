@@ -1,6 +1,14 @@
 const { NxAppWebpackPlugin } = require('@nx/webpack/app-plugin');
 const { NxReactWebpackPlugin } = require('@nx/react/webpack-plugin');
 const { join } = require('path');
+const { config } = require('dotenv');
+
+config.resolve ??= {};
+config.resolve.fallback = {
+  crypto: require.resolve('crypto-browserify'),
+  os: require.resolve('os-browserify/browser'),
+  path: require.resolve('path-browserify'),
+};
 
 module.exports = {
   output: {
@@ -9,6 +17,17 @@ module.exports = {
   devServer: {
     port: 4200,
   },
+  resolve:{
+  fallback:{
+    "crypto":require.resolve("crypto-browserify"),
+    "os": require.resolve("os-browserify/browser"),
+    "path":require.resolve("path-browserify"),
+    "vm": require.resolve("vm-browserify"),
+    "buffer": require.resolve("buffer/"),
+    "stream": require.resolve("stream-browserify"),
+    "events": require.resolve("events/")
+  }
+},
   plugins: [
     new NxAppWebpackPlugin({
       tsConfig: './tsconfig.app.json',
