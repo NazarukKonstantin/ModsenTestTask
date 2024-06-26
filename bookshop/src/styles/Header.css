@@ -6,23 +6,17 @@
   width: 100vw;
   margin: 0;
   padding: 15px;
-  height: 360px;
+  height: 260px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('../assets/header_background.jpg');
   background-position: center;
 }
 
-/* .backgroundWallpaper{
-  position: relative;
-  width: 100%;
-  transform: translateY(-300px);
-} */
-
 .pageTitle {
-  color: aliceblue;
-  font-size: 81px;
+  font-size: 4rem;
   padding: 0;
   margin-bottom: 10px;
+  color: var(--text-main-light-color);
 }
 
 .searchBar {
@@ -32,11 +26,25 @@
   font-size: 20px;
 }
 
-.searchIcon {
-  width: 20vw;
-  height: 10vw;
-  background-image: url('/bookshop/src/assets/search_icon.svg');
+.searchBarContainer{
+  display: flex;
+  margin-bottom: 30px;
 }
 
 .selectTitle {
+  color:var(--text-main-light-color);
+  font-size: 1.6rem;
+}
+
+.selectWithTitle{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.bottomHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:5vw;
 }

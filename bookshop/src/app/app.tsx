@@ -5,8 +5,6 @@ import '../styles/App.css';
 import { usePagination } from 'src/hooks/usePagination';
 import { useFetching } from 'src/hooks/useFetching';
 import BookService from './BookService';
-import MyButton from 'src/components/UI/MyButton/MyButton';
-import MyInput from 'src/components/UI/MyInput/MyInput';
 
 import { iPost } from 'src/models';
 
@@ -48,7 +46,7 @@ export function App() {
   };
 
   const filterBooks = (filterValue:string)=>{
-    return;
+    SetSelectedFilter(filterValue);
   }
 
   return (

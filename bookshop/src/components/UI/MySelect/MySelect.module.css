@@ -1,0 +1,17 @@
+@import url(C:\Users\kosty\Desktop\ModsenTestTask\bookshop\src\styles\app.css);
+
+.mySelect{
+  width: 15vw;
+  height: 3vw;
+  border: none;
+  font-size: 1.15rem;
+  color: var(--text-select-box-color);
+  border-radius: 20px;
+  padding-left: 0.5em;
+  border-right: 0.5em solid transparent;
+}
+
+.myOption {
+  background-color: white;
+  
+}

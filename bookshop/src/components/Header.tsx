@@ -8,7 +8,7 @@ import '../styles/Header.css';
 interface HeaderProps {
   create: (post: iPost) => void;
   selectSort: (value: string) => void;
-  selectorValue:string;
+  selectorValue: string;
 
   selectFilter: (value: string) => void;
   filterValue: string;
@@ -27,22 +27,44 @@ const Header = (props: HeaderProps, searchQuery = 'Search') => {
   //   setPost({ id: 1, title: 'newPost.title', body: '' });
   // };
 
+  const temp_arr = [
+    { name: 'Option 1', value: 'Option 1' },
+    { name: 'Option 2', value: 'Option 2' },
+  ];
+
   return (
-    <div className='header_wrap'>
-      {/* <img className='backgroundWallpaper' src="./assets/header_background.jpg" alt="books wallpaper"/> */}
-      <h1 className='pageTitle'>Search for books</h1>
-      <MyInput
-        className='searchBar'
-        type="text"
-        //value={searchQuery}
-        onChange={(e) => setPost({ ...post, title: e.target.value })}
-        placeholder="Search"
-      />
-      <MyButton className='searchIcon'></MyButton>
-      <h4 className='selectTitle'>Categories</h4>
-      <MySelect selectTitle="CategoryFilters" options={[]} onChange={(filter:string) => props.selectSort(filter)} selectValue={props.filterValue}/>
-      <h4 className='selectTitle'>Sorting by</h4>
-      <MySelect selectTitle="SortingBy" options={[]} onChange={(sort:string) => props.selectSort(sort)} selectValue={props.selectorValue}/>
+    <div className="header_wrap">
+      <h1 className="pageTitle">Search for books</h1>
+      <div className="searchBarContainer">
+        <MyInput
+          className="searchBar"
+          type="text"
+          //value={searchQuery}
+          onChange={(e) => setPost({ ...post, title: e.target.value })}
+          placeholder="Search"
+        />
+        <MyButton />
+      </div>
+      <div className="bottomHeader">
+        <div className="selectWithTitle">
+          <h4 className="selectTitle">Categories</h4>
+          <MySelect
+            selectTitle="CategoryFilters"
+            options={temp_arr}
+            onChange={(filter: string) => props.selectFilter(filter)}
+            selectValue={props.filterValue}
+          />
+        </div>
+        <div className="selectWithTitle">
+          <h4 className="selectTitle">Sorting by</h4>
+          <MySelect
+            selectTitle="SortingBy"
+            options={temp_arr}
+            onChange={(sort: string) => props.selectSort(sort)}
+            selectValue={props.selectorValue}
+          />
+        </div>
+      </div>
     </div>
   );
 };

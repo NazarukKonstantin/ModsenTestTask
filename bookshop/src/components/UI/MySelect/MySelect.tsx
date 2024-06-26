@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './MySelect.module.css'
 
 interface MySelectProps {
   options: { name: string; value: string }[];
@@ -12,17 +13,18 @@ const MySelect = ({
   onChange,
   selectValue,
   selectTitle = 'select',
-}: MySelectProps) => {
+}: MySelectProps,className:HTMLSelectElement) => {
   return (
     <select
+      className={classes.mySelect+" "+className}
       title={selectTitle}
       value={selectValue}
       onChange={(event) => onChange(event.target.value)}
     >
       {options.map((opt) => {
         return (
-          <option key={opt.value} value={opt.value}>
-            opt.name
+          <option key={opt.value} value={opt.value} className={classes.myOption}>
+            {opt.name}
           </option>
         );
       })}
