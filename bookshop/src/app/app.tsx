@@ -1,15 +1,13 @@
 // import {Route, Routes} from 'react-router-dom'
 // import SearchPage from 'src/pages/SearchPage';
 import { useState } from 'react';
-import '../styles/App.css';
 import { usePagination } from 'src/hooks/usePagination';
 import { useFetching } from 'src/hooks/useFetching';
 import BookService from './BookService';
-
+import Header from 'src/components/Header/Header';
 import { iPost } from 'src/models';
 
 import PostList from 'src/components/PostList';
-import Header from 'src/components/Header';
 
 export function App() {
   const [posts, setPosts] = useState([
@@ -42,16 +40,26 @@ export function App() {
 
   const sortPosts = (sortValue: string) => {
     SetSelectedSort(sortValue);
-    setPosts([...posts].sort((a,b)=>{return a.id-b.id}))
+    setPosts(
+      [...posts].sort((a, b) => {
+        return a.id - b.id;
+      })
+    );
   };
 
-  const filterBooks = (filterValue:string)=>{
+  const filterBooks = (filterValue: string) => {
     SetSelectedFilter(filterValue);
-  }
+  };
 
   return (
     <div className="App">
-      <Header create={createPost} selectSort={sortPosts} selectorValue={selectedSort} selectFilter={filterBooks} filterValue={selectedFilter}/>
+      <Header
+        create={createPost}
+        selectSort={sortPosts}
+        sortValue={selectedSort}
+        selectFilter={filterBooks}
+        filterValue={selectedFilter}
+      />
       {/* {posts.length !== 0 ? (
         <PostList posts={posts} title="Список" callback={removePost} />
       ) : (

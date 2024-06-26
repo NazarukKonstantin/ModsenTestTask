@@ -1,3 +1,3 @@
-const getPagesCount = (totalCount: number,limit:number)=>{
-  return Math.ceil(totalCount/limit);
-}
+// const getBookListPagesCount = (totalCount: number,onePageLimit:number)=>{
+//   return Math.ceil(totalCount/limit);
+// }

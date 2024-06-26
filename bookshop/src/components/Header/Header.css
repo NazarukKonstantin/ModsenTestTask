@@ -19,29 +19,6 @@
   color: var(--text-main-light-color);
 }
 
-.searchBar {
-  width: 40vw;
-  height: 3vw;
-  padding: 0 20px;
-  font-size: 20px;
-}
-
-.searchBarContainer{
-  display: flex;
-  margin-bottom: 30px;
-}
-
-.selectTitle {
-  color:var(--text-main-light-color);
-  font-size: 1.6rem;
-}
-
-.selectWithTitle{
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
 .bottomHeader{
   display: flex;
   justify-content: center;

@@ -1,0 +1,10 @@
+.selectTitle {
+  color:var(--text-main-light-color);
+  font-size: 1.6rem;
+}
+
+.selectWithTitle{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
