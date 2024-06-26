@@ -1,8 +1,7 @@
 import React from 'react';
-import MyInput from '../UI/MyInput/MyInput';
-import MyButton from '../UI/MyButton/MyButton';
-import '../styles/SearchBar.css';
-import '../styles/Header.css';
+import MyInput from '@uiMyInput/MyInput';
+import MyButton from '@uiMyButton/MyButton';
+import '@components/SearchBar/SearchBar.css';
 
 interface searchBarProps {
   searchQuery: string;

@@ -9,7 +9,6 @@
   },
   "private": true,
   "dependencies": {
-    "dotenv": "^16.4.5",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "tslib": "^2.3.0"
@@ -53,6 +52,7 @@
     "react-refresh": "^0.10.0",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "~5.4.2",
     "webpack-cli": "^5.1.4"
   },

@@ -1,6 +1,5 @@
-import React from 'react';
-import MySelect from '../UI/MySelect/MySelect';
-import '../styles/SelectContainer.css';
+import MySelect from '@uiMySelect/MySelect';
+import '@components/SelectContainer/SelectContainer.css';
 
 interface SelectContainerProps {
   optionsArr: { name: string; value: string }[];

@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { iPost } from 'src/models';
-import SearchBar from '../SearchBar/SearchBar';
-import MySelect from '../UI/MySelect/MySelect';
-import '../styles/Header.css';
-import SelectContainer from '../SelectContainer/SelectContainer';
+import { iPost } from '@/models';
+import SearchBar from '@components/SearchBar/SearchBar';
+import '@components/Header/Header.css';
+import SelectContainer from '@components/SelectContainer/SelectContainer';
 
 interface HeaderProps {
   create: (post: iPost) => void;
@@ -16,18 +14,7 @@ interface HeaderProps {
 }
 
 const Header = (props: HeaderProps, searchQuery = 'Search') => {
-  //const [post, setPost] = useState({ id: 1, title: '', body: '' });
-
-  // const addNewPost = (e: any) => {
-  //   e.preventDefault();
-  //   const newPost = {
-  //     ...post,
-  //     id: Date.now(),
-  //   };
-  //   props.create(newPost);
-  //   setPost({ id: 1, title: 'newPost.title', body: '' });
-  // };
-
+  
   const temp_arr = [
     { name: 'Option 1', value: 'Option 1' },
     { name: 'Option 2', value: 'Option 2' },

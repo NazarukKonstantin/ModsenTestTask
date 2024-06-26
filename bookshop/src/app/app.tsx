@@ -1,13 +1,13 @@
 // import {Route, Routes} from 'react-router-dom'
 // import SearchPage from 'src/pages/SearchPage';
 import { useState } from 'react';
-import { usePagination } from 'src/hooks/usePagination';
-import { useFetching } from 'src/hooks/useFetching';
-import BookService from './BookService';
-import Header from 'src/components/Header/Header';
-import { iPost } from 'src/models';
+import { usePagination } from '@/hooks/usePagination';
+import { useFetching } from '@/hooks/useFetching';
+import BookService from '@/app/BookService';
+import Header from '@components/Header/Header';
+import { iPost } from '@/models';
 
-import PostList from 'src/components/PostList';
+//import PostList from 'src/components/PostList';
 
 export function App() {
   const [posts, setPosts] = useState([

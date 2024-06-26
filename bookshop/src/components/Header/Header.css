@@ -8,7 +8,7 @@
   padding: 15px;
   height: 260px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('../assets/header_background.jpg');
+    url('@/assets/header_background.jpg');
   background-position: center;
 }
 

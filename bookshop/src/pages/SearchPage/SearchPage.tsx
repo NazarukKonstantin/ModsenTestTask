@@ -1,4 +1,4 @@
-import '../styles/SearchPage.css'
+import '@/pages/SearchPage/SearchPage.css'
 
 const SearchPage = () => {
   return (

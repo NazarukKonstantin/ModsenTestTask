@@ -1,5 +1,4 @@
-import React from "react"
-import '../styles/BookDetailsPage.css'
+import '@/pages/BookDetailsPage/BookDetailsPage.css'
 
 const BookDetailsPage = () => {
   return (
