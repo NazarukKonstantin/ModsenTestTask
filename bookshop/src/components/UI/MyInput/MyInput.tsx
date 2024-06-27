@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes } from "react"
+import { InputHTMLAttributes } from "react"
 import classes from "./MyInput.module.css"
 
 const MyInput = ({title="input", placeholder="Search",className,...props}:InputHTMLAttributes<HTMLInputElement>) => {

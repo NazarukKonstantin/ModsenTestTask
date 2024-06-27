@@ -9,4 +9,5 @@
   flex-direction: column;
   --text-main-light-color: aliceblue;
   --text-select-box-color: #3a3a3a;
+  --header-background-img: '@/assets/header_background.jpg';
 }

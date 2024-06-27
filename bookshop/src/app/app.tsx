@@ -1,11 +1,10 @@
-// import {Route, Routes} from 'react-router-dom'
-// import SearchPage from 'src/pages/SearchPage';
 import { useState } from 'react';
 import { usePagination } from '@/hooks/usePagination';
 import { useFetching } from '@/hooks/useFetching';
 import BookService from '@/app/BookService';
 import Header from '@components/Header/Header';
-import { iPost } from '@/models';
+import { iPost } from '@/constants/models';
+import BookItem from '@/components/BookItem/BookItem';
 
 //import PostList from 'src/components/PostList';
 
@@ -53,13 +52,14 @@ export function App() {
 
   return (
     <div className="App">
-      <Header
+      <BookItem/>
+      {/* <Header
         create={createPost}
         selectSort={sortPosts}
         sortValue={selectedSort}
         selectFilter={filterBooks}
         filterValue={selectedFilter}
-      />
+      /> */}
       {/* {posts.length !== 0 ? (
         <PostList posts={posts} title="Список" callback={removePost} />
       ) : (

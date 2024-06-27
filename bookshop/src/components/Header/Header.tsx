@@ -1,4 +1,4 @@
-import { iPost } from '@/models';
+import { iPost } from '@/constants/models';
 import SearchBar from '@components/SearchBar/SearchBar';
 import '@components/Header/Header.css';
 import SelectContainer from '@components/SelectContainer/SelectContainer';

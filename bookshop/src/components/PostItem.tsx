@@ -1,6 +1,5 @@
-import React from 'react';
-import { iPost } from 'src/models';
-import MyButton from './UI/MyButton/MyButton';
+import { iPost } from '@/constants/models';
+import MyButton from '@uiMyButton/MyButton';
 
 interface PostProps {
   post: iPost;

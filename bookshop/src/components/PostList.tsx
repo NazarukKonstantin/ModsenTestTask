@@ -1,6 +1,5 @@
-import React from 'react';
 import PostItem from './PostItem';
-import { iPost } from 'src/models';
+import { iPost } from '@/constants/models';
 
 interface PostListProps {
   posts: iPost[];
