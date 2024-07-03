@@ -5,3 +5,15 @@
   justify-items: center;
   row-gap: 2vw;
 }
+
+@media screen and ((max-width:700px)){
+  .book-list{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and ((max-width: 450px)){
+  .book-list{
+    grid-template-columns: 1fr;
+  }
+}

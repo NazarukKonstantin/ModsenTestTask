@@ -6,7 +6,7 @@
   width: 100%;
   margin: 0;
   padding: 15px;
-  height: 260px;
+  height: 15vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('@assets/header_background.jpg');
   background-position: center;

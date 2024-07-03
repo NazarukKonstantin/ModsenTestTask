@@ -21,7 +21,7 @@
   margin-bottom: 1vw;
 }
 
-.book-details-page>.authors {
+.book-details-page > .text-info > .authors {
   text-decoration: underline;
   font-weight: 200;
   font-size: 1.3rem;
@@ -37,4 +37,17 @@
 
 .descr-text {
   font-size: 1.5rem;
+}
+
+@media screen and ((max-width: 1500px)) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and ((max-width: 850px)){
+  .book-details-page {
+    display: flex;
+    flex-direction: column;
+  }
 }
