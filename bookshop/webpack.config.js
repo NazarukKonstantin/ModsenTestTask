@@ -3,30 +3,34 @@ const { NxReactWebpackPlugin } = require('@nx/react/webpack-plugin');
 const { join } = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
+//added myself
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+const env = dotenv.config().parsed;
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
+
 module.exports = {
   output: {
     path: join(__dirname, './dist/bookshop'),
+    publicPath: '/',
   },
   devServer: {
     port: 4200,
+    historyApiFallback: true,
   },
   resolve: {
+    //added myself
     plugins: [
       new TsconfigPathsPlugin({
         extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
       }),
     ],
-    // fallback: {
-    //   crypto: require.resolve('crypto-browserify'),
-    //   os: require.resolve('os-browserify/browser'),
-    //   path: require.resolve('path-browserify'),
-    //   vm: require.resolve('vm-browserify'),
-    //   buffer: require.resolve('buffer/'),
-    //   stream: require.resolve('stream-browserify'),
-    //   events: require.resolve('events/'),
-    // },
   },
   plugins: [
+    new webpack.DefinePlugin(envKeys), //added myself
     new NxAppWebpackPlugin({
       tsConfig: './tsconfig.app.json',
       compiler: 'babel',

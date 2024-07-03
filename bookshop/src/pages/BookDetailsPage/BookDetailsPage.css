@@ -1,0 +1,40 @@
+.book-details-page {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.text-info {
+  display: flex;
+  flex-direction: column;
+  padding: 4vw;
+}
+
+.tags {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 2vw;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 3.5rem;
+  margin-bottom: 1vw;
+}
+
+.book-details-page>.authors {
+  text-decoration: underline;
+  font-weight: 200;
+  font-size: 1.3rem;
+  margin-bottom: 3vw;
+}
+
+.description {
+  width: 100%;
+  height: 100%;
+  padding: 1vw;
+  border: var(--text-gray-color) solid 1px;
+}
+
+.descr-text {
+  font-size: 1.5rem;
+}

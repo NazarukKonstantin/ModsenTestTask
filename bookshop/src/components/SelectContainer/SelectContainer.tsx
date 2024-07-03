@@ -11,7 +11,7 @@ interface SelectContainerProps {
 const SelectContainer = ({
   optionsArr,
   selectTitle,
-  selectValueFunc: selectValue,
+  selectValueFunc,
   chosenValue,
 }: SelectContainerProps) => {
   return (
@@ -20,7 +20,7 @@ const SelectContainer = ({
       <MySelect
         selectTitle={selectTitle}
         options={optionsArr}
-        onChange={(value: string) => selectValue(value)}
+        onChange={(value: string) => selectValueFunc(value)}
         selectValue={chosenValue}
       />
     </div>

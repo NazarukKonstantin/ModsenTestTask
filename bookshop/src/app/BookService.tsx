@@ -1,18 +1,6 @@
 import axios from 'axios';
 
-//const apiKey = process.env.REACT_APP_BOOKS_API_KEY;
-
-// async function fetchObject(url:string){
-//   return await fetch(url)
-//   .then(res=>{
-//     if(res.ok){
-//       console.log("SUCCESS");
-//     }
-//     else{
-//       console.log("Something went wrong");
-//     }
-//     res.json()});
-// }
+export const apiKey = process.env.REACT_APP_API;
 
 export default class BookService {
   static async findBooksMatchingQuery(searchQuery: string) {

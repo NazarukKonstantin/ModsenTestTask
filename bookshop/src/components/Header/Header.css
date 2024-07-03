@@ -3,13 +3,14 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding: 15px;
   height: 260px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url();
+    url('@assets/header_background.jpg');
   background-position: center;
+  box-sizing: border-box;
 }
 
 .pageTitle {
@@ -19,9 +20,9 @@
   color: var(--text-main-light-color);
 }
 
-.bottomHeader{
+.bottomHeader {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:5vw;
+  gap: 5vw;
 }

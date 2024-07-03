@@ -21,7 +21,9 @@
       "@uiMyButton/*": ["src/components/UI/MyButton/*"],
       "@uiMyInput/*": ["src/components/UI/MyInput/*"],
       "@uiMySelect/*": ["src/components/UI/MySelect/*"],
-      "@uiLoader/*": ["src/components/UI/Loader/*"],
+      "@uiMyImg/*": ["src/components/UI/MyImg/*"],
+      "@uiMyImgWithShadow/*": ["src/components/UI/MyImgWithShadow/*"],
+      "@uiLoader/*": ["src/components/UI/Loader/*"]
     },
     "jsx": "react-jsx",
     "allowJs": false,
