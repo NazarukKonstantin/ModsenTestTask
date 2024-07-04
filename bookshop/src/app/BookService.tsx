@@ -1,18 +1,41 @@
 import axios from 'axios';
+import { useState } from 'react';
+import { BASE_URL } from '@/constants/constants';
 
-export const apiKey = process.env.REACT_APP_API;
+const apiKey = process.env.REACT_APP_API;
 
-export default class BookService {
-  static async findBooksMatchingQuery(searchQuery: string) {
+const BookService = () => {
+  const [searchParams, setSearchParams] = useState({
+    searchTerm: "",
+    category: "all",
+    sortBy: "relevance",
+  });
+  const [books, setBooks] = useState([]);
+  const [startIndex, setStartIndex] = useState(0);
+  
+  
+  async function findBooksMatchingQuery(searchQuery: string) {
     return null;
   }
-
-  static async getBooks() {
+  async function getBooks() {
     try {
-      const response = await axios.get('');
+      const response = await axios.get( `${BASE_URL}?q=${searchParams.searchTerm}${
+        searchParams.category !== "all"
+          ? `+subject:${searchParams.category}`
+          : ""
+      }
+      &orderBy=${
+        searchParams.sortBy
+      }&startIndex=${startIndex}&maxResults=30&key=${apiKey}`
+    );
+    
       return response.data;
     } catch (e) {
       console.log(e);
     }
   }
 }
+
+export default BookService;
+
+

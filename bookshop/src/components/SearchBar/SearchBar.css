@@ -7,5 +7,37 @@
 
 .searchBarContainer{
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 2vw;
+}
+
+@media screen and ((max-width: 880px)){
+  .searchBarContainer{
+    margin-bottom: 1vw;
+  }
+  .searchBar {
+    width: 50vw;
+    height: 3vw;
+  }
+}
+
+@media screen and ((max-width: 750px)){
+  .searchBarContainer{
+    margin-bottom: 1vw;
+  }
+  .searchBar {
+    width: 50vw;
+    height: 4vw;
+  }
+}
+
+@media screen and ((max-width: 550px)){
+  .searchBar{
+    font-size: 1rem;
+  }
+}
+
+@media screen and ((max-width: 420px)){
+  .searchBar{
+    height: 10vw;
+  }
 }

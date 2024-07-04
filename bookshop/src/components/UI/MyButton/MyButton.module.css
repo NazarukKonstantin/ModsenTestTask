@@ -5,9 +5,62 @@
   height: 3vw;
   cursor: pointer;
   background-image: url('C:\Users\kosty\Desktop\ModsenTestTask\bookshop\src\assets\search_icon.svg');
-  background-size: 34px;
   background-repeat: no-repeat;
+  background-size: 34px;
   transform: translateX(-3vw) translateY(0.7vw);
   background-color: transparent;
   border: none;
+}
+
+@media screen and ((max-width: 1350px)) {
+  .myBtn {
+    height: 2vw;
+    background-size: 30px;
+  }
+}
+
+@media screen and ((max-width: 1150px)) {
+  .myBtn {
+    background-size: 25px;
+  }
+}
+
+@media screen and ((max-width: 1000px)) {
+  .myBtn {
+    background-size: 20px;
+    transform: translateX(-3vw) translateY(1vw);
+  }
+}
+
+@media screen and ((max-width: 750px)) {
+  .myBtn {
+    height: 3vw;
+    transform: translateX(-4vw) translateY(1vw);
+  }
+}
+
+@media screen and ((max-width: 550px)) {
+  .myBtn {
+    background-size: 15px;
+    transform: translateX(-4vw) translateY(1.5vw);
+  }
+}
+
+@media screen and ((max-width: 420px)) {
+  .myBtn {
+    width: 6vw;
+    height: 7vw;
+    background-size: 25px;
+    transform: translateX(-8vw) translateY(3vw);
+  }
+}
+
+
+@media screen and ((max-width: 325px)) {
+  .myBtn {
+    width: 5vw;
+    height: 6vw;
+    background-size: 20px;
+    transform: translateX(-8vw) translateY(3vw);
+  }
 }

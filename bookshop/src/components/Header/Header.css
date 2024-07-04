@@ -5,7 +5,6 @@
   align-items: center;
   width: 100%;
   margin: 0;
-  padding: 15px;
   height: 15vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('@assets/header_background.jpg');
@@ -25,4 +24,51 @@
   justify-content: center;
   align-items: center;
   gap: 5vw;
+}
+
+@media screen and ((max-width: 1500px)) {
+  .pageTitle {
+    font-size: 3rem;
+  }
+}
+
+@media screen and ((max-width: 1200px)){
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+}
+@media screen and ((max-width: 1000px)){
+  .pageTitle {
+    font-size: 2rem;
+    margin-bottom: 0.5vw;
+  }
+}
+
+@media screen and ((max-width: 750px)){
+  .header_wrap{
+    height: 20vw;
+  }
+}
+
+@media screen and ((max-width: 500px)){
+  .header_wrap{
+    height: 23vw;
+  }
+}
+
+@media screen and ((max-width: 420px)){
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+  .header_wrap{
+    height: 40vw;
+  }
+
+  .bottomHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+  }
 }

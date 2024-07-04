@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { usePagination } from '@/hooks/usePagination';
 import { useFetching } from '@/hooks/useFetching';
-import BookService from '@/app/BookService';
-import SearchPage from '@/pages/SearchPage/SearchPage';
-import { constants } from 'buffer';
 import { useTypeSelector } from '@/hooks/useTypeSelector';
 import { useDispatch } from 'react-redux';
 import { ADD_ITEMS } from '@/store/bookReducer';
@@ -21,18 +18,31 @@ export function App() {
 
   //move
   const dispatch = useDispatch();
-  //внутри действия кнопки писать preventDefault
+  //внутри действия кнопки написать preventDefault
   //dispatch({type:ADD_ITEMS, items: bookList[]ответсАПИ})
 
   const pagesArray = usePagination(totalPages);
 
   const [fetchBooks, areBooksLoading, fetchError] = useFetching(async () => {
-    const response = await BookService.getBooks();
+    // const response = await BookService.getBooks();
   });
+
+  const selectFilter = (value: string) => {
+    setSelectedFilter(value);
+  };
+
+  const selectSort=(value:string)=>{
+    setSelectedSort(value);
+  }
 
   return (
     <div className="App">
-      <Layout/>
+      <Layout
+        selectFilter={selectFilter}
+        sortingValue={selectedSort}
+        selectSort={selectSort}
+        filterValue={selectedFilter}
+      />
     </div>
   );
 }

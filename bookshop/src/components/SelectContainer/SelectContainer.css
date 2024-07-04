@@ -8,3 +8,21 @@
   align-items: center;
   gap: 15px;
 }
+
+@media screen and ((max-width: 1000px)){
+  .selectTitle{
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and ((max-width: 1000px)){
+  .selectTitle{
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and ((max-width: 550px)){
+  .selectTitle{
+    font-size: 1rem;
+  }
+}
